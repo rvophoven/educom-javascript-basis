@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      
+      let i = 0
+      let count = 0
+      let total = 0
+      /// list of products in the shopping cart
+      const shoppingcart = [
+        {product: "milk", price: 1, amount: 4},
+        {product: "eggs", price: 0.5, amount: 6},
+        {product: "bread", price: 2, amount: 2},
+        {product: "meat", price: 4, amount: 1},
+        {product: "patato", price: 1.5, amount: 2}
+      ]
+      /// count each product times amount
+      shoppingcart.forEach( (value, index, array) => {
+        count = count + shoppingcart[i].price * shoppingcart[i].amount
+        console.log(count)
+        i++
+      }) 
+      /// pay taxes
+      total = count * 1.21
+      console.log({Total: total})
+    
+   
+    </script>
+  </body>
+</html>
