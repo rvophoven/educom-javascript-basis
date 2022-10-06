@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      
+      const shoppingCart = [
+        {id: 1, name: "HTML Book",price: 12.50},
+        {id: 2, name: "CSS Book",price: 10.00},
+        {id: 3, name: "JavaScript Book",price: 20.00},
+      ]
+
+      let total = 0
+      shoppingCart.forEach((item) =>{
+        total += item.price
+      })
+
+      console.log(`Total: ${total}`)
+
+    </script>
+  </body>
+</html>
