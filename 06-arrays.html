@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+    /// Array......................................................
+    console.log("Array:")
+
+    const beatles = ["John", "Paul", "George", "Ringo"]
+    const zeppelin = new Array("Robert", "Jimmy", "John", "John") 
+    const stones = []
+    console.log(beatles[1])
+    console.log(zeppelin[2])
+
+    console.log("")
+      
+    /// Push ....................................................
+    console.log("Push:")
+
+    const beatlesPu = ["John", "Paul", "George"]
+    console.log(beatlesPu)
+    /// add ringo to end
+    beatlesPu.push("Ringo")
+    console.log(beatlesPu)
+
+    console.log("")
+
+    /// Pop ......................................................
+    console.log("Pop:")
+
+    const  beatlesPo = ["Ringo", "Paul", "George", "John"]
+    console.log(beatlesPo)
+    /// 2 died
+    beatlesPo.pop()
+    beatlesPo.pop()
+
+    console.log(beatlesPo)
+
+    console.log("")
+
+    /// Convert to string .......................................
+    console.log("Convert to string:")
+    
+    const  beatlesCo = ["Ringo", "Paul", "George", "John"]
+    const asString = beatles.toString()
+    console.log({asString: asString})
+
+    const asJoin = beatles.join(" * ")
+    console.log({asJoin: asJoin})
+
+    console.log("")
+
+    /// Modify .................................................
+    console.log("Modify:")
+
+    const beatlesMo = ["Ringo","Paul","what's his name?","John"]
+    console.log(`Before: ${beatlesMo}`)
+
+    beatlesMo[2] = "George"
+    console.log(`After: ${beatlesMo}`)
+
+    console.log("")
+
+    /// Sorting ...................................................
+    console.log("Sorting:")
+
+    const  beatlesSo = ["Ringo", "Paul", "George", "John"]
+    beatlesSo.sort()
+    console.log(beatlesSo)
+
+    const points = [40,100,1,5,25,10]
+    points.sort()
+    console.log(points)
+    /// sort only looks to the firts number or letter
+
+    console.log("")
+
+    /// Compare methode .............................................
+    console.log("Compare methode:")
+
+    console.log({strange: points})
+    
+    const points2 = [40, 100, 1, 5, 25, 10]
+    points2.sort((a,b)=> a-b)
+    console.log({propre: points2})
+
+    console.log("")
+    
+    /// Looping through arrays .......................................
+    console.log("Looping trough arrays:")
+
+    let txt = ""
+    const  beatlesLo = ["Ringo", "Paul", "George", "John"]
+
+    const inLoop = (value, index, array) =>{
+      txt += value.toUpperCase()
+    } 
+    beatlesLo.forEach(inLoop)
+    console.log(txt)
+    ///arrow function
+    txt = ""
+    beatlesLo2 = ["Ringo", "Paul", "George", "John"]
+
+    beatlesLo2.forEach( (value, index, array) => {
+    txt += `${ value.toUpperCase() } - `
+    })    
+    console.log(txt)
+
+    console.log("")
+    
+    /// Map ..........................................................
+    console.log("Map:")
+
+    const beatlesMa = ["Ringo", "Paul", "George", "John"]
+
+    const n = beatlesMa.map(item => {
+      return(item.toUpperCase())
+    })
+    console.log(n)
+
+    console.log("")
+    
+    /// Filter ..................................................
+    console.log("Filter:")
+
+    const myFunction = (value, index, array) => {
+      return value > 18
+    }
+    const numbers = [45,4,9,16,25]
+    const over18 = numbers.filter(myFunction)
+
+    ///or
+    const  m = numbers.filter(value => value > 18)
+    console.log(over18, m)
+    
+    console.log("")
+    
+    /// InderxOf & fing .......................................
+    console.log("IndexOf & find:")
+
+    const fruits = ["Apple", "Orange", "Apple", "Mango"]
+    const numbers2 = [4,9,16,25,29]
+
+    const findOver18 = (item) => {
+      return item > 18
+    }
+
+    const a = fruits.indexOf("Apple")
+    const b = fruits.lastIndexOf("Apple")
+
+    const c = numbers2.find(findOver18)
+    const d = numbers2.findIndex(findOver18)
+
+    console.log({a: a, b: b,c: c,d: d})
+
+    console.log("")
+     
+    </script>
+  </body>
+</html>
