@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      
+      class car {
+        ///properties
+        color = ""
+        /// set color
+        constructor(color){
+          this.color = color
+        }
+        /// get color
+        getColor(){
+          return(this.color)
+        }
+      }
+
+      /// set new cars
+      const fiat = new car("Red")
+      const porsche = new car("Black")
+
+      console.log({fiat: fiat.getColor(), porsche: porsche.getColor()})
+
+    </script>
+  </body>
+</html>
