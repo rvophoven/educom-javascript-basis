@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      /// Function...........................................
+      console.log("Functions:")
+
+      const doSomething = (x,y) => {
+
+        const didSomething = {
+          msg: 'We did something with X: ${x} and  Y: ${y}',
+          x: x * 4,
+          y: y * 2
+        }
+        return(didSomething)
+      }
+
+      let count = 5
+      let apples = 2
+
+      let result = doSomething(count, apples)
+      console.log(result)
+      console.log("")
+
+      /// Condition.......................................
+      console.log("Condition:")
+
+      let hour = 10
+
+      if(hour >= 12){
+        console.log("It's past 12")
+      } else {
+        console.log("It's not noon yet")
+      }
+
+      if (hour >= 12 && hour <= 13){
+        console.log("It's tme for lunch")
+      }
+
+      const what = hour < 12 ? "coffee" : "lunch"
+      console.log(`let's have ${what}`)
+      console.log("")
+
+      /// Switch.........................................
+      console.log("Switch:")
+
+      hour = 11
+      switch(hour){
+        case 10: {
+          msg = "It's 10 o'clock"
+          break
+        }
+        case 11: {
+          msg = "It's 11 o'clock"
+          break
+        }
+        case 12: {
+          msg = "It's noon!"
+          break
+        }
+        default: {
+          msg = "My clock is off"
+          break
+        }
+      }
+
+      console.log(`Message: ${msg}`)
+      console.log("")
+
+      /// Logical switch.................................
+      console.log("Logical switch:")
+
+      const choice = 3
+      msg = ""
+
+      switch(true){
+        case (choice <1):{
+          msg = "Make coffee!"
+          break
+        }
+        case (choice >2):{
+          msg = "Make tea!"
+          break
+        }
+        default:{
+          msg = "Poor water!"
+          break
+        }
+      }
+
+      console.log(`Message: ${msg}`)
+      console.log("")
+
+      /// For loop .......................................
+      console.log("For loop:")
+      let i
+      for (i =0; i<10;i++){
+        console.log(`The value of i: ${i}`)
+      }
+
+      console.log("")
+
+      /// While loop .....................................
+      console.log("While loop:")
+
+      i = 40
+      while(i>20){
+        console.log(`The value of i: ${i}`)
+        i--
+      }
+
+      console.log("")
+
+    </script>
+  </body>
+</html>
